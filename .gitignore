@@ -1,0 +1,70 @@
+# Visual Studio cache/options
+
+.vs/
+
+# Build folders
+
+Debug/
+Release/
+x64/
+x86/
+build/
+
+# CMake (if you use it later)
+
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Visual Studio generated files
+
+*.VC.db
+*.VC.opendb
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# IntelliSense / browsing database
+
+*.ipch
+*.aps
+*.ncb
+*.opendb
+*.opensdf
+*.sdf
+
+# Compiled objects
+
+*.obj
+*.o
+*.lib
+*.dll
+*.exe
+*.pdb
+*.ilk
+
+# Logs
+
+*.log
+
+# Temporary files
+
+*.tmp
+*.temp
+*.cache
+
+# Windows junk
+
+Thumbs.db
+Desktop.ini
+
+# VS Code (if you sometimes open it there)
+
+.vscode/
+
+# Output binaries
+
+bin/
+out/
