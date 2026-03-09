@@ -24,6 +24,9 @@
     <ClCompile Include="html\Lexer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="html\Parser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="html\.gitignore">
@@ -36,6 +39,9 @@
     </ClInclude>
     <ClInclude Include="html\Token.hpp">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="html\Parser.hpp">
+      <Filter>html</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
