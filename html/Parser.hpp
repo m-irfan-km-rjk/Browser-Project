@@ -1,39 +1,29 @@
 #pragma once
 
 #include <string>
-#include <unordered_map>
 #include "Token.hpp"
 #include <vector>
-
-enum class DOMNodeType {
-	HTML,
-	HEAD,
-	BODY,
-	DIV,
-	P,
-	TITLE
-};
-
-struct DOMNode {
-	DOMNodeType type;
-	std::string text;
-	std::unordered_map<std::string, std::string> attribs;
-	DOMNode* children[];
-};
+#include "DOM.hpp"
 
 class Parser {
 public:
-	Parser(std::vector<Token> tokens);
+	Parser(std::vector<Token> &tokens);
 
-	void parse();
+	Document parse();
+	
 
 private:
 	int pos;
 	std::vector<Token> tokens;
 	Token currentToken;
-	DOMNode* root;
+	std::vector<DOMNode*> stack;
+	DOMNode* currentNode;
 
 	void nextToken();
 	Token peek();
-
+	bool hasNext();
+	void push(DOMNode* t);
+	DOMNode* pop();
+	DOMNode* top();
+	std::vector<std::string> parseClassList(std::string s);
 };

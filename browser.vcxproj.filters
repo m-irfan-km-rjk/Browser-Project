@@ -27,11 +27,15 @@
     <ClCompile Include="html\Parser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="html\DOM.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="html\.gitignore">
       <Filter>html</Filter>
     </None>
+    <None Include=".gitignore" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="html\Lexer.hpp">
@@ -41,6 +45,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="html\Parser.hpp">
+      <Filter>html</Filter>
+    </ClInclude>
+    <ClInclude Include="html\DOM.hpp">
       <Filter>html</Filter>
     </ClInclude>
   </ItemGroup>
