@@ -60,6 +60,7 @@ DOMNode* Parser::top() {
 Document Parser::parse() {
     Document result = Document();
 
+
     while (hasNext()) {
         switch (currentToken.type) {
             case TokenType::TAG_OPEN:
@@ -74,7 +75,6 @@ Document Parser::parse() {
                     nextToken();
                 }
                 else {
-                    nextToken();
                     DOMNode* newNode = new DOMNode(currentToken.value, currentNode);
                     currentNode->children.push_back(newNode);
                     push(newNode);
@@ -106,6 +106,7 @@ Document Parser::parse() {
                             nextToken();
                         }
                     }
+
                 }
         }
     }

@@ -4,7 +4,7 @@
 #include <string>
 #include <cctype>
 
-Lexer::Lexer(const std::string& code): code(code), pos(0), currentChar('\0'), state(LexerState::LX_CONTENT) {
+Lexer::Lexer(const std::string& code): code(code), pos(0), currentChar('\0'), state(LexerState::LX_CONTENT), row(1), col(1) {
 	if (!this->code.empty()) {
 		currentChar = code[0];
 	}
@@ -19,8 +19,10 @@ char Lexer::peek() {
 }
 
 void Lexer::nextChar() {
-	if (pos < code.size())
+	if (pos < code.size()) {
+		col++;
 		currentChar = code[++pos];
+	}
 	else
 		currentChar = '\0';
 }
@@ -50,6 +52,8 @@ std::vector<Token> Lexer::tokenize() {
 
 		}
 	}
+
+	tokens.push_back({TokenType::EOF_TOKEN,"EOF",row,col});
 
 	return tokens;
 }

@@ -123,6 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="css\Lexer.cpp" />
     <ClCompile Include="html\DOM.cpp" />
     <ClCompile Include="html\Lexer.cpp" />
     <ClCompile Include="html\Parser.cpp" />
@@ -133,6 +134,8 @@
     <None Include="html\.gitignore" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="css\Lexer.hpp" />
+    <ClInclude Include="css\Token.hpp" />
     <ClInclude Include="html\DOM.hpp" />
     <ClInclude Include="html\Lexer.hpp" />
     <ClInclude Include="html\Parser.hpp" />

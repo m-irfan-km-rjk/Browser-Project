@@ -30,6 +30,9 @@
     <ClCompile Include="html\DOM.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="css\Lexer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="html\.gitignore">
@@ -49,6 +52,12 @@
     </ClInclude>
     <ClInclude Include="html\DOM.hpp">
       <Filter>html</Filter>
+    </ClInclude>
+    <ClInclude Include="css\Lexer.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="css\Token.hpp">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
